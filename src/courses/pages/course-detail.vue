@@ -34,38 +34,35 @@
         <v-col cols="8">
           <h1 class="font-weight-bold pb-3">Course Items</h1>
 
-          <v-dialog persistent v-if="dialog" v-model=itemSelect width="720">
+          <v-dialog v-if="dialog" v-model=itemSelect width="720">
             <v-card>
-              <v-card-title class="grey lighten-2 font-weight-bold">
+              <v-card-title class="grey lighten-2">
                 {{ itemSelect.name }}
               </v-card-title>
               <v-divider></v-divider>
-
-              <div v-if="itemSelect.name == 'Video'" class="d-flex justify-center align-center py-3">
-                <iframe width="560" height="315" v-bind:src="itemSelect.description"
+              <!--TODO: Change dialog content by item type-->
+              <div class="d-flex justify-center align-center py-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LwCRRUa8yTU"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
               </div>
-              <p v-else class="d-flex justify-start align-center pt-5 pb-3 px-7 text-justify">
-                {{itemSelect.description}}
-              </p>
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn text color="indigo accent-4" class="font-weight-bold" @click="dialog = false">
-                  Completed
+                  I accept
                 </v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>
 
-          <v-card v-for="item in items" :key="item.id" class="mx-auto mb-3">
+          <v-card v-for="item in items" :key="item" class="mx-auto mb-3">
             <v-container>
               <v-row>
                 <v-col>
                   <div>Item</div>
                   <p class="text--primary font-weight-bold mb-1">{{ item.name }}</p>
-                  <div class="text--secondary  text-truncate" style="max-width: 450px;">{{ item.description }}</div>
+                  <div class="text--secondary">{{ item.description }}</div>
                 </v-col>
                 <v-col class="d-flex justify-center align-center">
                   <v-btn outlined rounded color="indigo accent-4" class="font-weight-bold" @click.stop="prueba(item)">

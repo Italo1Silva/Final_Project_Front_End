@@ -1,7 +1,7 @@
 <template>
   <div class="courses">
-    <v-row class="pt-4">
-      <v-col cols="12" class="pb-0">
+    <v-row>
+      <v-col cols="12">
         <h1 class="pl-5">Courses</h1>
       </v-col>
     </v-row>

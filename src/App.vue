@@ -93,7 +93,7 @@
 
       <v-footer dark padless align="center">
         <v-card-title  class="mx-auto my-0">
-          <p class="subheading my-auto pr-10">Hi we are CyberSoft!</p>
+          <p class="subheading my-auto pr-10">Social Networks</p>
 
           <v-spacer></v-spacer>
           <v-btn class="mx-2 white--text" href="https://www.facebook.com/" target="_blank" icon>
@@ -142,6 +142,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  background-color: #f3f3f6;
 }
 </style>
